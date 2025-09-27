@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tables",
+  "info": {
+    "singularName": "table",
+    "pluralName": "tables",
+    "displayName": "Table",
+    "description": "Table content with CKEditor 5"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    },
+    "module_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module-content.module-content",
+      "mappedBy": "table"
+    },
+    "publishedAt": {
+      "type": "datetime"
+    }
+  }
+}

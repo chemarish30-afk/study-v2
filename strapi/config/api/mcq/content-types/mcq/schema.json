@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mcqs",
+  "info": {
+    "singularName": "mcq",
+    "pluralName": "mcqs",
+    "displayName": "MCQ",
+    "description": "Multiple Choice Questions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "choices": {
+      "type": "json",
+      "required": true
+    },
+    "correctAnswer": {
+      "type": "string",
+      "required": true
+    },
+    "feedback": {
+      "type": "text"
+    },
+    "module_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module-content.module-content",
+      "mappedBy": "mcq"
+    },
+    "publishedAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modules",
+  "info": {
+    "singularName": "module",
+    "pluralName": "modules",
+    "displayName": "Module",
+    "description": "Modules within chapters"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "description": {
+      "type": "text"
+    },
+    "chapter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "modules"
+    },
+    "module_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module-content.module-content",
+      "mappedBy": "module"
+    },
+    "publishedAt": {
+      "type": "datetime"
+    }
+  }
+}

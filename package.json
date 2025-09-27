@@ -1,0 +1,40 @@
+{
+  "name": "lms-strapi-nextjs",
+  "version": "1.0.0",
+  "description": "Learning Management System with Strapi Cloud and Next.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "strapi": "cd strapi && npm run develop",
+    "setup": "npm install && cd strapi && npm install",
+    "start-dev": "node scripts/start-dev.js",
+    "load-data": "node scripts/load-sample-data.js",
+    "setup-strapi": "node scripts/setup-strapi.js",
+    "test-setup": "node scripts/test-setup.js"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@strapi/strapi": "^4.15.0",
+    "@strapi/plugin-users-permissions": "^4.15.0",
+    "@strapi/plugin-i18n": "^4.15.0",
+    "axios": "^1.6.0",
+    "next-auth": "^4.24.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
