@@ -4,6 +4,9 @@
   "description": "Learning Management System with Strapi Cloud",
   "private": true,
   "scripts": {
+    "build": "cd strapi && npm run build",
+    "develop": "cd strapi && npm run develop",
+    "start": "cd strapi && npm run start",
     "strapi": "cd strapi && npm run develop",
     "setup": "npm install && cd strapi && npm install",
     "setup-strapi": "node scripts/setup-strapi.js"
